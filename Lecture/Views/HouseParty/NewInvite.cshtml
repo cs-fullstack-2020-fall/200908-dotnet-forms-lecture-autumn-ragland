@@ -1,5 +1,11 @@
 @model Lecture.Models.Invite
 <h1>Add New Invite</h1>
+@if(@ViewData["errors"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+    @ViewData["errors"]
+    </div>
+}
 @using (@Html.BeginForm("AddInvite", "HouseParty"))
 {
     <div class="form-group">
@@ -19,4 +25,5 @@
         @Html.TextBoxFor(m => m.age, new { @class="form-control" })
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-}
+}   
+

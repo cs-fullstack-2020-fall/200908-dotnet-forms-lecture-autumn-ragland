@@ -3,6 +3,7 @@ using Lecture.DAO;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Lecture.Controllers
 {
@@ -32,13 +33,34 @@ namespace Lecture.Controllers
         [HttpPost]
         public IActionResult AddInvite(Invite newInvite)
         {
-            _context.Invites.Add(newInvite);
-            _context.SaveChanges();
-            return RedirectToAction("ViewInvite", "HouseParty", new {inviteID = newInvite.id});
+            if(ModelState.IsValid)
+            {
+                _context.Invites.Add(newInvite);
+                _context.SaveChanges();
+                return RedirectToAction("ViewInvite", "HouseParty", new {inviteID = newInvite.id});
+            } else 
+            {
+                List<string> errors = GetErrorListFromModelState(ModelState);
+                string displayErr = "";
+                errors.ForEach(err => displayErr += err);
+                ViewData["errors"] = displayErr;
+                return View("NewInvite", newInvite);
+            }
+            
         }
-        public IActionResult NewInvite()
+        public IActionResult NewInvite(Invite newInvite)
         {
             return View();
+        }
+        // method to capture model state validation errors
+        public static List<string> GetErrorListFromModelState(ModelStateDictionary modelState)
+        {
+            IEnumerable<string> query = from state in modelState.Values
+                from error in state.Errors
+                select error.ErrorMessage;
+
+            List<string> errorList = query.ToList();
+            return errorList;
         }
     }
 }
