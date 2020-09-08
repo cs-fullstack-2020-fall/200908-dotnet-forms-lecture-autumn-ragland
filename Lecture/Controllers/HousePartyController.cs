@@ -40,7 +40,7 @@ namespace Lecture.Controllers
             return View(_context);
         }
         [HttpPost]
-        // remove bind
+        // remove explicit bind
         // public IActionResult AddInvite([Bind("inviteName", "isAttending", "numberAttended", "age")] Invite newInvite)
         public IActionResult AddInvite(Invite newInvite)
         {
@@ -48,7 +48,11 @@ namespace Lecture.Controllers
             _context.SaveChanges();
             // return Content($"Return new invite {newInvite.inviteName}");
                 ViewData["invite"] = $"ID {newInvite.id}\nName {newInvite.inviteName}\nIs Attending {newInvite.isAttending}\nParties Attended {newInvite.numberAttended}\nAge : {newInvite.age}\n---\n";
-                return View("ViewInvite");
+                return View("ViewInvite", newInvite);
+        }
+        public IActionResult NewInvite()
+        {
+            return View();
         }
     }
 }

@@ -1,8 +1,11 @@
 @model Lecture.Models.Invite
 <h1>View Invite</h1>
-
-<p>ID : @Model.id</p>
-<p>Name : @Model.inviteName</p>
-<p>Is Attending : @Model.isAttending</p>
-<p>Parties Attended : @Model.numberAttended</p>
-<p>Age : @Model.age</p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">ID : @Model.id</h5>
+    <h5 class="card-title">Name : @Model.inviteName</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Is Attending : @Model.isAttending</h6>
+    <p class="card-text">Parties Attended : @Model.numberAttended</p>
+    <p class="card-text">Age : @Model.age</p>
+  </div>
+</div>

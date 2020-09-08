@@ -16,7 +16,7 @@
     {   
         <tr>
         <th scope="row">@inv.id</th>
-        <td>@inv.inviteName</td>
+        <td> <a asp-area="" asp-controller="HouseParty" asp-action="ViewInvite" asp-route-inviteID = "@inv.id">@inv.inviteName</a> </td>
         <td>@inv.isAttending</td>
         <td>@inv.numberAttended</td>
         <td>@inv.age</td>
