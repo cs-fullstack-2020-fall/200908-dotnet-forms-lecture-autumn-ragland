@@ -14397,8 +14397,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\student\\Code_School\\cohort5\\sprint_three\\dotnet\\200908\\200908-dotnet-forms-lecture-autumn-ragland\\Lecture\\Views\\HouseParty\\Error.cshtml",
+      "TargetPath": "Views\\HouseParty\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\student\\Code_School\\cohort5\\sprint_three\\dotnet\\200908\\200908-dotnet-forms-lecture-autumn-ragland\\Lecture\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\student\\Code_School\\cohort5\\sprint_three\\dotnet\\200908\\200908-dotnet-forms-lecture-autumn-ragland\\Lecture\\Views\\HouseParty\\ListInvites.cshtml",
+      "TargetPath": "Views\\HouseParty\\ListInvites.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14424,6 +14434,11 @@
     {
       "FilePath": "c:\\Users\\student\\Code_School\\cohort5\\sprint_three\\dotnet\\200908\\200908-dotnet-forms-lecture-autumn-ragland\\Lecture\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\student\\Code_School\\cohort5\\sprint_three\\dotnet\\200908\\200908-dotnet-forms-lecture-autumn-ragland\\Lecture\\Views\\HouseParty\\ViewInvite.cshtml",
+      "TargetPath": "Views\\HouseParty\\ViewInvite.cshtml",
       "FileKind": "mvc"
     }
   ],

@@ -376,3 +376,6 @@ C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-fo
 C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-forms-lecture-autumn-ragland\Lecture\obj\Debug\netcoreapp3.1\Lecture.dll
 C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-forms-lecture-autumn-ragland\Lecture\obj\Debug\netcoreapp3.1\Lecture.pdb
 C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-forms-lecture-autumn-ragland\Lecture\obj\Debug\netcoreapp3.1\Lecture.genruntimeconfig.cache
+C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-forms-lecture-autumn-ragland\Lecture\obj\Debug\netcoreapp3.1\Razor\Views\HouseParty\ListInvites.cshtml.g.cs
+C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-forms-lecture-autumn-ragland\Lecture\obj\Debug\netcoreapp3.1\Razor\Views\HouseParty\ViewInvite.cshtml.g.cs
+C:\Users\student\Code_School\cohort5\sprint_three\dotnet\200908\200908-dotnet-forms-lecture-autumn-ragland\Lecture\obj\Debug\netcoreapp3.1\Razor\Views\HouseParty\Error.cshtml.g.cs
