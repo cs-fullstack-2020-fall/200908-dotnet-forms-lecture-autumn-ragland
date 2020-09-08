@@ -1,2 +1,26 @@
-<h1>View Invites</h1>
-@ViewData["invites"]
+@model Lecture.DAO.InviteContext
+<h1>View Invite</h1>
+@* using bootstrap table *@
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Is Attending</th>
+      <th scope="col">Parties Attended</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (Invite inv in @Model.Invites)
+    {   
+        <tr>
+        <th scope="row">@inv.id</th>
+        <td>@inv.inviteName</td>
+        <td>@inv.isAttending</td>
+        <td>@inv.numberAttended</td>
+        <td>@inv.age</td>
+        </tr>
+    }
+  </tbody>
+</table>

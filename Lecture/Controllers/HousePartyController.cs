@@ -18,9 +18,9 @@ namespace Lecture.Controllers
             Invite matchingInvite = _context.Invites.FirstOrDefault(inv => inv.id == inviteID);
             if(matchingInvite != null)
             {
-                // return Content($"ID {matchingInvite.id}\nName {matchingInvite.inviteName}\nIs Attending {matchingInvite.isAttending}\nParties Attended {matchingInvite.numberAttended}\nAge : {matchingInvite.age}\n---\n");
-                ViewData["invite"] = $"ID {matchingInvite.id}\nName {matchingInvite.inviteName}\nIs Attending {matchingInvite.isAttending}\nParties Attended {matchingInvite.numberAttended}\nAge : {matchingInvite.age}\n---\n";
-                return View();
+                // // return Content($"ID {matchingInvite.id}\nName {matchingInvite.inviteName}\nIs Attending {matchingInvite.isAttending}\nParties Attended {matchingInvite.numberAttended}\nAge : {matchingInvite.age}\n---\n");
+                // ViewData["invite"] = $"ID {matchingInvite.id}\nName {matchingInvite.inviteName}\nIs Attending {matchingInvite.isAttending}\nParties Attended {matchingInvite.numberAttended}\nAge : {matchingInvite.age}\n---\n";
+                return View(matchingInvite);
             } else 
             {
                 // return Content("Not matching invite found");
@@ -36,11 +36,13 @@ namespace Lecture.Controllers
                 displayStr += $"ID {inv.id}\nName {inv.inviteName}\nIs Attending {inv.isAttending}\nParties Attended {inv.numberAttended}\nAge : {inv.age}\n---\n";
             }
             // return Content($"{displayStr}");
-            ViewData["invites"] = displayStr;
-            return View();
+            // ViewData["invites"] = displayStr;
+            return View(_context);
         }
         [HttpPost]
-        public IActionResult AddInvite([Bind("inviteName", "isAttending", "numberAttended", "age")] Invite newInvite)
+        // remove bind
+        // public IActionResult AddInvite([Bind("inviteName", "isAttending", "numberAttended", "age")] Invite newInvite)
+        public IActionResult AddInvite(Invite newInvite)
         {
             _context.Invites.Add(newInvite);
             _context.SaveChanges();
