@@ -25,7 +25,9 @@ namespace Lecture.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("inviteName")
-                        .HasColumnType("TEXT");
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(200);
 
                     b.Property<bool>("isAttending")
                         .HasColumnType("INTEGER");

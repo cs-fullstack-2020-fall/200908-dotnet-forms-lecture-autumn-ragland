@@ -2,7 +2,7 @@
 
 namespace Lecture.Migrations
 {
-    public partial class initialCreate : Migration
+    public partial class Inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace Lecture.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    inviteName = table.Column<string>(nullable: true),
+                    inviteName = table.Column<string>(maxLength: 200, nullable: false),
                     isAttending = table.Column<bool>(nullable: false),
                     numberAttended = table.Column<int>(nullable: false),
                     age = table.Column<int>(nullable: false)

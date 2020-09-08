@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lecture.Migrations
 {
     [DbContext(typeof(InviteContext))]
-    [Migration("20200908145814_initialCreate")]
-    partial class initialCreate
+    [Migration("20200908191749_Inital")]
+    partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,9 @@ namespace Lecture.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("inviteName")
-                        .HasColumnType("TEXT");
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(200);
 
                     b.Property<bool>("isAttending")
                         .HasColumnType("INTEGER");
